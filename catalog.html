@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Полное меню ресторана RestoFood: пицца, бургеры, азиатская кухня, салаты, десерты и напитки.">
+  <title>Меню — RestoFood</title>
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="logo" href="index.html">
+        <img src="images/logo.svg" alt="Логотип RestoFood: вилка и ложка на оранжевом фоне" width="44" height="44">
+        RestoFood
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a class="active" href="catalog.html">Меню</a></li>
+          <li><a href="cart.html">Корзина</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+          <li><a href="about.html">О проекте</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>Меню ресторана</h1>
+
+    <div class="catalog">
+      <aside class="filters">
+        <h2>Фильтры</h2>
+        <form action="#" method="get">
+          <div class="form-field">
+            <label for="search">Поиск по названию</label>
+            <input type="search" id="search" name="q" placeholder="Например, рамен">
+          </div>
+
+          <div class="form-field">
+            <label for="category">Категория</label>
+            <select id="category" name="category">
+              <option value="">Все блюда</option>
+              <option value="pizza">Пицца и паста</option>
+              <option value="burgers">Бургеры и закуски</option>
+              <option value="asia">Азиатская кухня</option>
+              <option value="salads">Салаты</option>
+              <option value="hot">Горячее и супы</option>
+              <option value="desserts">Десерты</option>
+              <option value="drinks">Напитки</option>
+            </select>
+          </div>
+
+          <fieldset class="form-field">
+            <legend>Цена, ₽</legend>
+            <div class="price-range">
+              <label for="price-min">от</label>
+              <input type="number" id="price-min" name="price_min" min="0" step="10">
+              <label for="price-max">до</label>
+              <input type="number" id="price-max" name="price_max" min="0" step="10">
+            </div>
+          </fieldset>
+
+          <fieldset class="form-field">
+            <legend>Особенности</legend>
+            <label class="form-check"><input type="checkbox" name="veg"> Вегетарианское</label>
+            <label class="form-check"><input type="checkbox" name="hot"> Острое</label>
+          </fieldset>
+
+          <button class="btn" type="submit">Применить</button>
+          <button class="btn btn--outline" type="reset">Сбросить</button>
+        </form>
+      </aside>
+
+      <section>
+        <div class="catalog__toolbar">
+          <h2>Все блюда <span class="catalog__count">(14)</span></h2>
+          <div class="catalog__sort">
+            <label for="sort">Сортировка:</label>
+            <select id="sort" name="sort">
+              <option value="popular">По популярности</option>
+              <option value="price-asc">Сначала дешевле</option>
+              <option value="price-desc">Сначала дороже</option>
+              <option value="name">По названию</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="card-grid">
+          <article class="card">
+            <img src="images/dishes/margherita.svg" alt="Пицца «Маргарита» на белой тарелке" width="400" height="300">
+            <div class="card__body">
+              <h3 class="card__title"><a href="dish.html?id=1">Пицца «Маргарита»</a></h3>
+              <p class="card__tags"><span class="badge">Пицца</span> <span class="badge badge--veg">Вегетарианское</span></p>
+              <p class="card__desc">Томатный соус, моцарелла и свежий базилик на тонком тесте.</p>
+              <p class="card__footer"><span class="price">590 ₽</span> <button class="btn btn--small" type="button">В корзину</button></p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="images/dishes/burger.svg" alt="Бургер «Классик» на белой тарелке" width="400" height="300">
+            <div class="card__body">
+              <h3 class="card__title"><a href="dish.html?id=2">Бургер «Классик»</a></h3>
+              <p class="card__tags"><span class="badge">Бургеры</span></p>
+              <p class="card__desc">Говяжья котлета, чеддер, маринованный огурец и фирменный соус.</p>
+              <p class="card__footer"><span class="price">450 ₽</span> <button class="btn btn--small" type="button">В корзину</button></p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="images/dishes/carbonara.svg" alt="Паста «Карбонара» на белой тарелке" width="400" height="300">
+            <div class="card__body">
+              <h3 class="card__title"><a href="dish.html?id=3">Паста «Карбонара»</a></h3>
+              <p class="card__tags"><span class="badge">Паста</span></p>
+              <p class="card__desc">Спагетти, бекон, яичный соус и пармезан.</p>
+              <p class="card__footer"><span class="price">520 ₽</span> <button class="btn btn--small" type="button">В корзину</button></p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="images/dishes/sushi.svg" alt="Суши-сет «Филадельфия» на белой тарелке" width="400" height="300">
+            <div class="card__body">
+              <h3 class="card__title"><a href="dish.html?id=4">Сет «Филадельфия»</a></h3>
+              <p class="card__tags"><span class="badge">Азия</span></p>
+              <p class="card__desc">16 роллов с лососем, сливочным сыром и огурцом.</p>
+              <p class="card__footer"><span class="price">890 ₽</span> <button class="btn btn--small" type="button">В корзину</button></p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="images/dishes/ramen.svg" alt="Миска рамена с курицей" width="400" height="300">
+            <div class="card__body">
+              <h3 class="card__title"><a href="dish.html?id=5">Рамен с курицей</a></h3>
+              <p class="card__tags"><span class="badge">Азия</span></p>
+              <p class="card__desc">Наваристый бульон, пшеничная лапша, яйцо и зелёный лук.</p>
+              <p class="card__footer"><span class="price">480 ₽</span> <button class="btn btn--small" type="button">В корзину</button></p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="images/dishes/caesar.svg" alt="Салат «Цезарь» с курицей в миске" width="400" height="300">
+            <div class="card__body">
+              <h3 class="card__title"><a href="dish.html?id=6">Салат «Цезарь»</a></h3>
+              <p class="card__tags"><span class="badge">Салаты</span></p>
+              <p class="card__desc">Романо, курица гриль, пармезан, гренки и соус «Цезарь».</p>
+              <p class="card__footer"><span class="price">390 ₽</span> <button class="btn btn--small" type="button">В корзину</button></p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="images/dishes/tacos.svg" alt="Тако с говядиной на белой тарелке" width="400" height="300">
+            <div class="card__body">
+              <h3 class="card__title"><a href="dish.html?id=7">Тако с говядиной</a></h3>
+              <p class="card__tags"><span class="badge">Закуски</span> <span class="badge badge--hot">Острое</span></p>
+              <p class="card__desc">Кукурузные лепёшки, рубленая говядина, сальса и халапеньо.</p>
+              <p class="card__footer"><span class="price">360 ₽</span> <button class="btn btn--small" type="button">В корзину</button></p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="images/dishes/tomyum.svg" alt="Суп «Том ям» в глубокой тарелке" width="400" height="300">
+            <div class="card__body">
+              <h3 class="card__title"><a href="dish.html?id=8">Суп «Том ям»</a></h3>
+              <p class="card__tags"><span class="badge">Супы</span> <span class="badge badge--hot">Острое</span></p>
+              <p class="card__desc">Кокосовое молоко, креветки, грибы, лемонграсс и лайм.</p>
+              <p class="card__footer"><span class="price">550 ₽</span> <button class="btn btn--small" type="button">В корзину</button></p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="images/dishes/steak.svg" alt="Стейк рибай на белой тарелке" width="400" height="300">
+            <div class="card__body">
+              <h3 class="card__title"><a href="dish.html?id=9">Стейк рибай</a></h3>
+              <p class="card__tags"><span class="badge">Горячее</span></p>
+              <p class="card__desc">Мраморная говядина зернового откорма, прожарка на выбор.</p>
+              <p class="card__footer"><span class="price">1290 ₽</span> <button class="btn btn--small" type="button">В корзину</button></p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="images/dishes/fries.svg" alt="Порция картофеля фри" width="400" height="300">
+            <div class="card__body">
+              <h3 class="card__title"><a href="dish.html?id=10">Картофель фри</a></h3>
+              <p class="card__tags"><span class="badge">Закуски</span> <span class="badge badge--veg">Вегетарианское</span></p>
+              <p class="card__desc">Хрустящий картофель с морской солью и кетчупом.</p>
+              <p class="card__footer"><span class="price">190 ₽</span> <button class="btn btn--small" type="button">В корзину</button></p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="images/dishes/cheesecake.svg" alt="Кусок чизкейка на белой тарелке" width="400" height="300">
+            <div class="card__body">
+              <h3 class="card__title"><a href="dish.html?id=11">Чизкейк «Нью-Йорк»</a></h3>
+              <p class="card__tags"><span class="badge">Десерты</span> <span class="badge badge--veg">Вегетарианское</span></p>
+              <p class="card__desc">Нежный сливочный десерт на песочной основе с ягодным соусом.</p>
+              <p class="card__footer"><span class="price">320 ₽</span> <button class="btn btn--small" type="button">В корзину</button></p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="images/dishes/pancakes.svg" alt="Стопка блинов с ягодами" width="400" height="300">
+            <div class="card__body">
+              <h3 class="card__title"><a href="dish.html?id=12">Блины с ягодами</a></h3>
+              <p class="card__tags"><span class="badge">Десерты</span> <span class="badge badge--veg">Вегетарианское</span></p>
+              <p class="card__desc">Тонкие блины со сметаной, свежими ягодами и мёдом.</p>
+              <p class="card__footer"><span class="price">280 ₽</span> <button class="btn btn--small" type="button">В корзину</button></p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="images/dishes/lemonade.svg" alt="Бокал цитрусового лимонада" width="400" height="300">
+            <div class="card__body">
+              <h3 class="card__title"><a href="dish.html?id=13">Лимонад «Цитрус»</a></h3>
+              <p class="card__tags"><span class="badge">Напитки</span> <span class="badge badge--veg">Вегетарианское</span></p>
+              <p class="card__desc">Домашний лимонад из апельсина, лимона и мяты, 0,4 л.</p>
+              <p class="card__footer"><span class="price">220 ₽</span> <button class="btn btn--small" type="button">В корзину</button></p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="images/dishes/cappuccino.svg" alt="Чашка капучино" width="400" height="300">
+            <div class="card__body">
+              <h3 class="card__title"><a href="dish.html?id=14">Капучино</a></h3>
+              <p class="card__tags"><span class="badge">Напитки</span> <span class="badge badge--veg">Вегетарианское</span></p>
+              <p class="card__desc">Эспрессо из зёрен арабики и взбитое молоко, 0,3 л.</p>
+              <p class="card__footer"><span class="price">190 ₽</span> <button class="btn btn--small" type="button">В корзину</button></p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div>
+        <p><strong>RestoFood</strong></p>
+        <p>Готовим с душой — доставляем с заботой.</p>
+      </div>
+      <div>
+        <p>г. Санкт-Петербург, ул. 1-я Красноармейская, д. 1</p>
+        <p><a href="tel:+78121234567">+7 (812) 123-45-67</a></p>
+        <p>Ежедневно с 10:00, доставка с 11:00</p>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="catalog.html">Меню</a></li>
+          <li><a href="cart.html">Корзина</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+          <li><a href="about.html">О проекте</a></li>
+        </ul>
+      </nav>
+      <p class="site-footer__copy">© 2026 RestoFood. Учебный проект.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="RestoFood — заказ еды из ресторана с доставкой и отслеживанием статуса приготовления.">
+  <title>RestoFood — заказ еды из ресторана</title>
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="logo" href="index.html">
+        <img src="images/logo.svg" alt="Логотип RestoFood: вилка и ложка на оранжевом фоне" width="44" height="44">
+        RestoFood
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a class="active" href="index.html">Главная</a></li>
+          <li><a href="catalog.html">Меню</a></li>
+          <li><a href="cart.html">Корзина</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+          <li><a href="about.html">О проекте</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero__text">
+        <h1>Горячая еда из нашей кухни — к вашей двери</h1>
+        <p>Соберите заказ из меню ресторана, оплатите онлайн и следите, как повар готовит ваши блюда: от «принят» до «передан курьеру».</p>
+        <div class="hero__actions">
+          <a class="btn" href="catalog.html">Смотреть меню</a>
+          <a class="btn btn--outline" href="cart.html">Моя корзина</a>
+        </div>
+      </div>
+      <img src="images/hero.svg" alt="Тарелка с пиццей в окружении бургера, суши, салата и торта" width="600" height="420">
+    </section>
+
+    <section class="section">
+      <h2>Хиты недели</h2>
+      <p class="section__lead">Блюда, которые заказывают чаще всего.</p>
+      <div class="card-grid">
+        <article class="card">
+          <img src="images/dishes/margherita.svg" alt="Пицца «Маргарита» на белой тарелке" width="400" height="300">
+          <div class="card__body">
+            <h3 class="card__title"><a href="dish.html?id=1">Пицца «Маргарита»</a></h3>
+            <p class="card__desc">Томатный соус, моцарелла и свежий базилик на тонком тесте.</p>
+            <p class="card__footer"><span class="price">590 ₽</span> <span class="card__weight">450 г</span></p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="images/dishes/burger.svg" alt="Бургер «Классик» на белой тарелке" width="400" height="300">
+          <div class="card__body">
+            <h3 class="card__title"><a href="dish.html?id=2">Бургер «Классик»</a></h3>
+            <p class="card__desc">Говяжья котлета, чеддер, маринованный огурец и фирменный соус.</p>
+            <p class="card__footer"><span class="price">450 ₽</span> <span class="card__weight">320 г</span></p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="images/dishes/sushi.svg" alt="Суши-сет «Филадельфия» на белой тарелке" width="400" height="300">
+          <div class="card__body">
+            <h3 class="card__title"><a href="dish.html?id=4">Сет «Филадельфия»</a></h3>
+            <p class="card__desc">16 роллов с лососем, сливочным сыром и огурцом.</p>
+            <p class="card__footer"><span class="price">890 ₽</span> <span class="card__weight">520 г</span></p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="images/dishes/ramen.svg" alt="Миска рамена с курицей" width="400" height="300">
+          <div class="card__body">
+            <h3 class="card__title"><a href="dish.html?id=5">Рамен с курицей</a></h3>
+            <p class="card__desc">Наваристый бульон, пшеничная лапша, яйцо и зелёный лук.</p>
+            <p class="card__footer"><span class="price">480 ₽</span> <span class="card__weight">500 г</span></p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="images/dishes/caesar.svg" alt="Салат «Цезарь» с курицей в миске" width="400" height="300">
+          <div class="card__body">
+            <h3 class="card__title"><a href="dish.html?id=6">Салат «Цезарь»</a></h3>
+            <p class="card__desc">Романо, курица гриль, пармезан, гренки и соус «Цезарь».</p>
+            <p class="card__footer"><span class="price">390 ₽</span> <span class="card__weight">250 г</span></p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="images/dishes/cheesecake.svg" alt="Кусок чизкейка на белой тарелке" width="400" height="300">
+          <div class="card__body">
+            <h3 class="card__title"><a href="dish.html?id=11">Чизкейк «Нью-Йорк»</a></h3>
+            <p class="card__desc">Нежный сливочный десерт на песочной основе с ягодным соусом.</p>
+            <p class="card__footer"><span class="price">320 ₽</span> <span class="card__weight">150 г</span></p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Как сделать заказ</h2>
+      <ol class="steps">
+        <li>
+          <h3>1. Выберите блюда</h3>
+          <p>Откройте меню, отфильтруйте по категории и добавьте позиции в корзину.</p>
+        </li>
+        <li>
+          <h3>2. Оформите заказ</h3>
+          <p>Проверьте состав и количество, укажите адрес и способ оплаты.</p>
+        </li>
+        <li>
+          <h3>3. Следите за статусом</h3>
+          <p>Видно, на каком этапе ваш заказ: принят, готовится, у курьера, доставлен.</p>
+        </li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div>
+        <p><strong>RestoFood</strong></p>
+        <p>Готовим с душой — доставляем с заботой.</p>
+      </div>
+      <div>
+        <p>г. Санкт-Петербург, ул. 1-я Красноармейская, д. 1</p>
+        <p><a href="tel:+78121234567">+7 (812) 123-45-67</a></p>
+        <p>Ежедневно с 10:00, доставка с 11:00</p>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="catalog.html">Меню</a></li>
+          <li><a href="cart.html">Корзина</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+          <li><a href="about.html">О проекте</a></li>
+        </ul>
+      </nav>
+      <p class="site-footer__copy">© 2026 RestoFood. Учебный проект.</p>
+    </div>
+  </footer>
+</body>
+</html>

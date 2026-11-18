@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="О проекте RestoFood: учебный сайт заказа еды из ресторана.">
+  <title>О проекте — RestoFood</title>
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="logo" href="index.html">
+        <img src="images/logo.svg" alt="Логотип RestoFood: вилка и ложка на оранжевом фоне" width="44" height="44">
+        RestoFood
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="catalog.html">Меню</a></li>
+          <li><a href="cart.html">Корзина</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+          <li><a class="active" href="about.html">О проекте</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="prose">
+      <h1>О проекте</h1>
+      <p>RestoFood — учебный сайт для заказа еды из ресторана, выполненный в рамках дисциплины «Введение в интернет-технологии». Проект развивается в течение семестра: каждая практическая работа добавляет новый слой.</p>
+
+      <h2>Что умеет сайт</h2>
+      <ul>
+        <li>Показывает меню ресторана с описанием, составом и ценой каждого блюда.</li>
+        <li>Собирает заказ в корзине: позиции, количество и итоговая сумма.</li>
+        <li>Показывает статус приготовления заказа: принят, готовится, передан курьеру, доставлен.</li>
+      </ul>
+
+      <h2>План развития</h2>
+      <ol>
+        <li><strong>ПР 1.</strong> Статические страницы на HTML и CSS, адаптивная вёрстка.</li>
+        <li><strong>ПР 2.</strong> Фильтрация и сортировка меню, корзина и форма обратной связи на JavaScript, данные из внешнего API.</li>
+        <li><strong>ПР 3.</strong> Сервер на FastAPI, база данных SQLite, регистрация и вход по паролю, хранение заказов.</li>
+        <li><strong>ПР 4.</strong> Публикация в интернете: Docker, хостинг, HTTPS.</li>
+      </ol>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div>
+        <p><strong>RestoFood</strong></p>
+        <p>Готовим с душой — доставляем с заботой.</p>
+      </div>
+      <div>
+        <p>г. Санкт-Петербург, ул. 1-я Красноармейская, д. 1</p>
+        <p><a href="tel:+78121234567">+7 (812) 123-45-67</a></p>
+        <p>Ежедневно с 10:00, доставка с 11:00</p>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="catalog.html">Меню</a></li>
+          <li><a href="cart.html">Корзина</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+          <li><a href="about.html">О проекте</a></li>
+        </ul>
+      </nav>
+      <p class="site-footer__copy">© 2026 RestoFood. Учебный проект.</p>
+    </div>
+  </footer>
+</body>
+</html>
